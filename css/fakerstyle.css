@@ -1,0 +1,257 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+	font-family: "Helvetica Neue",Helvetica,Arial,Verdana,sans-serif;
+
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.main-title {
+  font-size: 33px;
+  line-height: 37px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 30px;
+}
+
+@-webkit-keyframes hand-move {
+  0%   { top: 0; }
+  50% { top: 10px; }
+  100% { top: 0; }
+}
+@-moz-keyframes hand-move {
+  0%   { top: 0; }
+  50% { top: 10px; }
+  100% { top: 0; }
+}
+@-o-keyframes hand-move {
+  0%   { top: 0; }
+  50% { top: 10px; }
+  100% { top: 0; }
+}
+@keyframes hand-move {
+  0%   { top: 0; }
+  50% { top: 10px; }
+  100% { top: 0; }
+}
+.fa-hand-pointer-o {
+  text-align: center;
+  display: block;
+  font-size: 30px;
+  margin-bottom: 10px;
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+  color: #f2600f;
+  position: relative;
+  -webkit-animation: hand-move 2s infinite;
+  -moz-animation:    hand-move 2s infinite;
+  -o-animation:      hand-move 2s infinite;
+  animation:         hand-move 2s infinite;
+}
+
+.ticket{
+  display: inline-block;
+ 	width: 25%;
+ 	min-height: 24px;
+    padding: 1% 1% 0 ;
+    float: left;
+    box-sizing: border-box;
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+  -webkit-transition: all 3500ms cubic-bezier(0.085, 0.540, 0.000, 1.000);
+   -moz-transition: all 3500ms cubic-bezier(0.085, 0.540, 0.000, 1.000);
+     -o-transition: all 3500ms cubic-bezier(0.085, 0.540, 0.000, 1.000);
+        transition: all 3500ms cubic-bezier(0.085, 0.540, 0.000, 1.000); /* custom */
+
+-webkit-transition-timing-function: cubic-bezier(0.085, 0.540, 0.000, 1.000);
+   -moz-transition-timing-function: cubic-bezier(0.085, 0.540, 0.000, 1.000);
+     -o-transition-timing-function: cubic-bezier(0.085, 0.540, 0.000, 1.000);
+        transition-timing-function: cubic-bezier(0.085, 0.540, 0.000, 1.000); /* custom */
+}
+
+.ticket.loaded {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+}
+
+.ticket a {
+  display: block;
+    color:#fff;
+    font-weight: bold;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.7);
+   -webkit-transition: all 200ms ease-out;
+   -moz-transition: all 0.1s;
+    transition: all 200ms ease-out;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.ticket a:hover{
+	cursor:pointer;
+}
+
+.ticket .push {
+  padding: 6%;
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ticket:active .push {
+  -webkit-transform: translate(0, 4px);
+  -moz-transform: translate(0, 4px);
+  -o-transform: translate(0, 4px);
+  transform: translate(0, 4px);
+}
+
+.one {
+  -webkit-box-shadow: 0 8px 0 #4e9fae, 0 10px 4px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 8px 0 #4e9fae, 0 10px 4px rgba(0, 0, 0, .35);
+  box-shadow: 0 8px 0 #4e9fae, 0 10px 4px rgba(0, 0, 0, .35);
+}
+
+.one .push{
+	background: #71B7C4;
+}
+
+.one:active, .one:focus {
+  -webkit-box-shadow:    0 8px 0 #4e9fae, 0 10px 8px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #4e9fae, 0 10px 8px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #4e9fae, 0 10px 8px rgba(0, 0, 0, .3);
+}
+
+.two {
+  -webkit-box-shadow: 0 8px 0 #d16a2e, 0 10px 4px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 8px 0 #d16a2e, 0 10px 4px rgba(0, 0, 0, .35);
+  box-shadow: 0 8px 0 #d16a2e, 0 10px 4px rgba(0, 0, 0, .35);
+}
+
+.two .push{
+	background: #E9854A;
+}
+
+.two:active, .two:focus {
+  -webkit-box-shadow:    0 8px 0 #d16a2e, 0 10px 8px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #d16a2e, 0 10px 8px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #d16a2e, 0 10px 8px rgba(0, 0, 0, .3);
+}
+
+.three {
+  -webkit-box-shadow: 0 8px 0 #91b563, 0 10px 4px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 8px 0 #91b563, 0 10px 4px rgba(0, 0, 0, .35);
+  box-shadow: 0 8px 0 #91b563, 0 10px 4px rgba(0, 0, 0, .35);
+}
+
+.three span.push{
+	background: #ACCA86;
+}
+
+.three:active, .three:focus {
+  -webkit-box-shadow:    0 8px 0 #91b563, 0 10px 8px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #91b563, 0 10px 8px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #91b563, 0 10px 8px rgba(0, 0, 0, .3);
+}
+
+.four {
+  -webkit-box-shadow: 0 8px 0 #e2c067, 0 10px 4px rgba(0, 0, 0, .35);
+  -moz-box-shadow: 0 8px 0 #e2c067, 0 10px 4px rgba(0, 0, 0, .35);
+  box-shadow: 0 8px 0 #e2c067, 0 10px 4px rgba(0, 0, 0, .35);
+}
+
+.four .push{
+  color: #D29F4C;
+  text-shadow: 1px 1px 0px rgba(247,233,196,0.7);
+	background: #FBDD8D;
+}
+
+.four:active, .four:focus {
+  -webkit-box-shadow:    0 8px 0 #e2c067, 0 10px 8px rgba(0, 0, 0, .3);
+    -moz-box-shadow: 0 8px 0 #e2c067, 0 10px 8px rgba(0, 0, 0, .3);
+    box-shadow:    0 8px 0 #e2c067, 0 10px 8px rgba(0, 0, 0, .3);
+}
+
+.price{
+	text-align: right;
+	float: right;
+}
+
+@media (max-width: 1224px) {
+  .ticket {
+    width: 25%;
+  }
+
+  .ticket a {
+    font-size: 1.1rem;
+  }
+
+}
+
+@media (max-width: 768px) {
+  .ticket {
+    width: 50%;
+    padding: 10px;
+  }
+
+  .ticket:nth-child(3) {
+    clear: both;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .ticket {
+    width: 100%;
+    float: none;
+  }
+
+}
